@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a th:href="@{/}">Home Page</a><h1 align="center">Create Provider</h1>
+
+   <table  style="margin-top:20px;">
+   <form th:action="@{/addprovider}" th:object="${providerform}" method="POST">
+     <tr>
+        <td>Name : </td>
+        <td> <input type="text" th:field="*{name}" /></td>
+     </tr>
+     <tr>
+        <td>Adress : </td>
+        <td> <input type="text" th:field="*{adress}" /></td>
+      </tr>
+           <tr>
+        <td>Email : </td>
+        <td> <input type="text" th:field="*{email}" /></td>
+      </tr>
+      <tr>
+        <td><input type="submit" value="Create" /></td>
+        <td></td>
+      </tr>
+     </form>
+     </table>
+    
+     
+    
+     <h3 style="color:red" th:text="${errormsg}"></h3>
+</body>
+</html>

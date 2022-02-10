@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a th:href="@{/}">Home Page</a><h1 align="center">Create Article</h1>
+
+   <table  style="margin-top:20px;">
+   <form th:action="@{/addarticle}" th:object="${articleform}" method="POST">
+     <tr>
+        <td>Label : </td>
+        <td> <input type="text" th:field="*{label}" /></td>
+     </tr>
+     <tr>
+        <td>Price : </td>
+        <td> <input type="text" th:field="*{price}" /></td>
+      </tr>
+      <tr>
+        <td><input type="submit" value="Create" /></td>
+        <td></td>
+      </tr>
+     </form>
+     </table>
+    
+     
+    
+     <h3 style="color:red" th:text="${errormsg}"></h3>
+</body>
+</html>

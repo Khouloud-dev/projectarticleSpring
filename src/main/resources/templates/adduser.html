@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a th:href="@{/}">Home Page</a><h1 align="center">Create User</h1>
+
+   <table  style="margin-top:20px;">
+   <form th:action="@{/adduser}" th:object="${userform}" method="POST">
+     <tr>
+        <td>First Name : </td>
+        <td> <input type="text" th:field="*{userName}" /></td>
+     </tr>
+     <tr>
+        <td>PassWord : </td>
+        <td> <input type="text" th:field="*{passWord}" /></td>
+      </tr>
+      <tr>
+        <td><input type="submit" value="Create" /></td>
+        <td></td>
+      </tr>
+     </form>
+     </table>
+    
+     
+    
+     <h3 style="color:red" th:text="${errormsg}"></h3>
+</body>
+</html>

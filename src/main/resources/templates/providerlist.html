@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a th:href="@{/}">Home Page</a><h1 align="center">Providers List</h1>
+<table  border="1" style="margin-Bottom:10px;">
+<tr style="color:red"><td>Name</td><td>Adress</td><td>Email</td></tr>
+<tr th:each="provider:${providers}">
+    <td th:text="${provider.name}"></td>
+    <td th:text="${provider.adress}"></td>
+    <td th:text="${provider.email}"></td>
+</tr>
+</table>
+<a  th:href="@{/addprovider}">Add Provider</a>
+
+</body>
+</html>

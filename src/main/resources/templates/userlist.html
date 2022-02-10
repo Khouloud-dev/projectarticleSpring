@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a th:href="@{/}">Home Page</a><h1 align="center">Users List</h1>
+
+<table  border="1" style="margin-Bottom:10px;">
+<tr style="color:red"><td>User Name</td><td>PassWord</td></tr>
+<tr th:each="user:${users}">
+    <td th:text="${user.userName}"></td>
+    <td th:text="${user.passWord}"></td>
+</tr>
+</table>
+<a  th:href="@{/adduser}">Add User</a>
+
+</body>
+</html>

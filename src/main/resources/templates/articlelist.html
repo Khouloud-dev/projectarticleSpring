@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a th:href="@{/}">Home Page</a><h1 align="center">Page Article</h1>
+
+ <table border="2" style="margin-top:20px;">
+     <tr><td style="background-color:yellow;">Label</td><td style="background-color:pink;">Price</td></tr>
+     <tr th:each="article:${articles}"><td  th:text="${article.label}"></td><td th:text="${article.price}"></td></tr>
+ </table>
+ <a th:href="@{/addarticle}">Add Article</a>
+</body>
+</html>
