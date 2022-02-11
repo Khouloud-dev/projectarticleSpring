@@ -29,7 +29,7 @@ public class ArticleController {
 	private String errormsg;   
 	
 	
-	@RequestMapping("/")
+	@GetMapping("/")
 	public String redirect() {
 
 		return "/home";
