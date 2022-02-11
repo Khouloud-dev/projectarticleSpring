@@ -28,10 +28,18 @@ public class ArticleController {
 	@Value("${error.message}")
 	private String errormsg;   
 	
-	
 	@GetMapping("/")
 	public String redirect() {
-
+		return "/home";
+	}
+	
+	@RequestMapping("/")
+	public String reedirect() {
+		return "/home";
+	}
+	
+	@RequestMapping("/home")
+	public String home() {
 		return "/home";
 	}
 	
